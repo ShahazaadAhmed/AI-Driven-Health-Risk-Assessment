@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .di{
+        border: 2px solid black;
+        padding-bottom: 90px;
+        box-shadow: 0 10px 20px 0 rgba(0,0,0,0.5);
+        margin-top:18px ;
+    }
+    .bi{
+        padding: 3%;
+        background-image: url("img2.jpg");
+    }
+    </style>
+<div class="di">   
+<body class="bi">     
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+    <div class="container mt-5">
+        <h1 class="mb-4">Heart Disease Prediction</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="age">Age (years):</label>
+                <input type="number" name="age" id="age" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" class="form-control" required>
+                    <option value="1">Female</option>
+                    <option value="2">Male</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="height">Height (cm):</label>
+                <input type="number" name="height" id="height" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" name="weight" id="weight" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="ap_hi">Systolic Blood Pressure (mm Hg):</label>
+                <input type="number" name="ap_hi" id="ap_hi" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="ap_lo">Diastolic Blood Pressure (mm Hg):</label>
+                <input type="number" name="ap_lo" id="ap_lo" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="cholesterol">Total Cholesterol (mg/dL):</label>
+                <input type="number" name="cholesterol" id="cholesterol" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="gluc">Glucose Level (mmol/L):</label>
+                <input type="number" name="gluc" id="gluc" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="smoke">Do you smoke?</label>
+                <select name="smoke" id="smoke" class="form-control" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="alco">Do you drink alcohol?</label>
+                <select name="alco" id="alco" class="form-control" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="active">Are you physically active?</label>
+                <select name="active" id="active" class="form-control" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
+</body>
+</div>
+</html>
